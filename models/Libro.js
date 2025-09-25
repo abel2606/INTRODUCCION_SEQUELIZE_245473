@@ -1,7 +1,7 @@
 
 
 export default (Sequelize, DataTypes) =>{
-    const Libr= Sequelize.define ("Libro", {
+    const Libro= Sequelize.define ("Libro", {
         titulo: {
             type: DataTypes.STRING,
             allowNull:false

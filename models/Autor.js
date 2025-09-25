@@ -13,7 +13,7 @@ export default (sequelize, DataTypes) => {
       foreignKey: 'autorId',
       as: 'libros'
     })
-  }
+  };
 
   return Autor;
 }

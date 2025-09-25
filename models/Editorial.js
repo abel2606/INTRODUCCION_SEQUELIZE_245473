@@ -5,13 +5,15 @@ export default (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        pais: DataTypes.SATRING
+        pais: DataTypes.STRING
     })
 
     Editorial.associate = (models) => {
-        Editorial.hasMany(User, {
+        Editorial.hasMany(models.Libro, {
             foreignKey: 'editorialId',
             as: 'libros'
         })
     }
+
+    return Editorial;
 }
