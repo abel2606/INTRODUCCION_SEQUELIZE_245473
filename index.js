@@ -27,6 +27,7 @@ async function main() {
     //Solo se utiliza para esta prueba el force
     await sequelize.sync({ force: true })
 
+    //Inicializamos cada modelo pasándole la instancia de sequelize y los Datatypes
     const autor = await Autor.create({ nombre: "Prueba", nacionalidad: "Mexicana" });
     const autor2 = await Autor.create({ nombre: "Prueba2", nacionalidad: "Mexicana" });
     const autor3 = await Autor.create({ nombre: "Prueba3", nacionalidad: "Mexicana" });
